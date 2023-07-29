@@ -32,7 +32,7 @@ const Footer = () => {
           <Box display={'flex'} alignItems={'center'} pt={{base: '20px', lg: '160px'}} gap={{md:'0.5rem', base :'0.5rem'}}>
 
 
-          <div className="wrapper">
+          {/* <div className="wrapper">
          <div className="button">
             <div className="icon">
               <FaFacebookF  className="i" />
@@ -63,16 +63,16 @@ const Footer = () => {
             </div>
             <span>YouTube</span>
          </div>
-      </div>
+      </div> */}
 
 
 
 
 
-            {/* <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={facebook} alt="img not found"></Image></Box>
+            <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={facebook} alt="img not found"></Image></Box>
             <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={instagram} alt="img not found"></Image></Box>
             <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={twiter} alt="img not found"></Image></Box>
-            <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={linkedin} alt="img not found"></Image></Box> */}
+            <Box borderRadius={'50%'} w={'34px'} h={'34px'} bg={'#fff'} display={'flex'} alignItems={'center'} justifyContent={'center'}><Image src={linkedin} alt="img not found"></Image></Box>
             
           </Box>
         </Box>
