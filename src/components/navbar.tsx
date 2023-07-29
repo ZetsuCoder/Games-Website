@@ -53,7 +53,7 @@ const Navbar = () => {
     {/* responsive only phone */}
 
 
-    <Box display={{base: 'flex', md: 'none', lg: 'none'}} w={'100%'} h={'10vh'} bg={'#020100'}>
+    <Box display={{base: 'flex', md: 'none', lg: 'none'}} w={'100%'} h={'10vh'} bg={'#020100'} >
         <Box w={'90%'} className='center'  display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
             <Box>
             <Text color={'#fff'} fontSize={{base: '32px', md: '50px'}} fontWeight={'1000'}>LOGO</Text>
