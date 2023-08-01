@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Text, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import {
@@ -26,9 +26,24 @@ const Mdnavbar = () => {
     onOpen()
   }
   const sizes = ['md']
+  const [scrollTop, setScrollTop] = useState(0)
+    const onScroll = () =>{
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100
+        setScrollTop(scrolled)
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll)
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
   return (
-    <Box >
+    <>
+    <Box bg={'black'} h={'10px'} position={'sticky'} top={'0'} left={'0'} zIndex={1} w={'100%'}>
+        <Box  h={'10px'} w={`${scrollTop}%`} bg={'#FA9021'}></Box>
+    </Box>
+    <Box>
        <Box display={{base: 'none', md: 'flex', lg: 'none'}} w={'100%'} h={'10vh'} bg={'#020100'}>
         <Box w={'90%'} className='center'  display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
             <Box>
@@ -72,6 +87,7 @@ const Mdnavbar = () => {
     </Box>
     
     </Box>
+    </>
   )
 }
 

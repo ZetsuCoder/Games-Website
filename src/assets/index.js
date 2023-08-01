@@ -50,6 +50,6 @@ import new6 from './new6.png'
 import new7 from './new7.png'
 import new8 from './new8.png'
 import new9 from './new9.png'
+import google from './google.png'
 
-
-export {gameimg, cry, unreal, cube, unity, joystick, card1, card2, card3, card4, fire, spiderman, circles, bg, pc, desctop, ps4, phone, glasses, pro1, pro2, pro3, pro4, pro5, pro6, twiter, facebook, instagram, linkedin, img2, man1, man2, man3, man4, user, server, location ,check, game2, game3,per1,per2,per3,new1,new2,new3,new4,new5,new6,new7,new8,new9}
+export {gameimg, cry, unreal, cube, unity, joystick, card1, card2, card3, card4, fire, spiderman, circles, bg, pc, desctop, ps4, phone, glasses, pro1, pro2, pro3, pro4, pro5, pro6, twiter, facebook, instagram, linkedin, img2, man1, man2, man3, man4, user, server, location ,check, game2, game3,per1,per2,per3,new1,new2,new3,new4,new5,new6,new7,new8,new9, google}

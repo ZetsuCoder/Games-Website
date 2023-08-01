@@ -1,7 +1,11 @@
-import { Box, Heading, Input, Text } from '@chakra-ui/react'
-import Link from 'next/link'
-import ParticleBg from '@/components/particleBg'
+import { Box, Button, Heading, Input, Text, InputRightElement, InputGroup } from '@chakra-ui/react'
+import { ViewIcon, ViewOffIcon} from '@chakra-ui/icons'
+import { useState } from "react";
+import Image from 'next/image'
+import { google } from '@/assets'
 const signUp = () => {
+  const [show, setShow] = useState(false)
+  const handleClick = () => setShow(!show)
   return (
     <>
   <Box w={'100%'} h={'100vh'} pb={{md: '80px', base: '0', lg: '0'}} display={'flex'} bg={'#1c1c1c'}> 
@@ -19,13 +23,27 @@ const signUp = () => {
           </Box>
           <Box pt={'20px'}>
             <Text>Password</Text>
-            <Input style={{outline: 'none'}} w={'280px'} placeholder='Enter your password' required />
+            <InputGroup w={'100%'}>
+              <Input w={'100%'}
+                pr='4rem'
+                type={show ? 'text' : 'password'}
+                placeholder='Enter password'
+                required
+              />
+              <InputRightElement width='4rem' pr={'0px'}>
+                <Button  h='1.75rem' size='sm'  onClick={handleClick}>
+                  {show ? <ViewIcon /> : <ViewOffIcon />}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
           </Box>
   
-          {/* forgot pass */}
   
-          <Box pt={'20px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-            
+          <Box pt={'20px'} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+          <Text>Sign up with</Text>
+            <Button mt={'10px'} fontSize={'20px'} w={'100%'}> <Box w={'25px'}><Image src={google} alt='img not found'></Image> 
+              </Box> 
+              oogle</Button>
           </Box>
           <Input mt={'20px'} type='submit' bg={'#45f3ff'} value="Sign In"></Input>
           </form>

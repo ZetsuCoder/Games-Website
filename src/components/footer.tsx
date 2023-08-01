@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
     
-    <ScrollToTop smooth top={20} style={{paddingLeft: '5px'}} color="#DC7000" />
+    <ScrollToTop  smooth style={{display: 'flex',alignItems: 'center', justifyContent: 'center', zIndex: '999', width: '60px', height: '60px'}} color="#DC7000" />
     <Box w={'100%'} h={{lg :'44vh', md: '100%', base: '100%'}} bg={'#020100'} pt={{base: '70px', md: '62px'}}>
       <Box w={{base: '90%', md: '80%', lg: '80%'}} className="center">
         <Box flexDirection={{base: 'column', md :'row'}} display={{lg:'flex', md: 'none'}} alignItems={'flex-start'} gap={{base: '2rem', md: '0'}} justifyContent={'space-between'}>

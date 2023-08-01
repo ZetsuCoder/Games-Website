@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const Main = () => {
   return (
-    <Box w={'100%'} h={{md: '100%', lg: '89.9vh', base : '100%'}} pb={{md: '80px', base: '20px', lg: '0'}}  bg={'#020100'}>
+    <Box w={'100%'} h={{md: '100%', lg: '88.9vh', base : '100%'}} pb={{md: '80px', base: '20px', lg: '0'}}  bg={'#020100'}>
     <Box w={{base: '90%', md: '80%', lg: '70%'}}  className="center">
       <Box display={'flex'} flexDirection={{base :'column', md: 'column', lg: 'row'}} pt={{base: '20px', md: '30px', lg: '80px'}} justifyContent={{lg: 'space-between'}} alignItems={{base: 'left', md: 'left', lg: 'center'}} >
         <Box w={{base: '100%', md: '100%', lg: "479px"}} display={'flex'} flexDirection={'column'}  gap={{base: '1rem', md :'1.5rem', lg: '2rem'}}>

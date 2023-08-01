@@ -11,7 +11,7 @@ import {
     DrawerCloseButton,
   } from '@chakra-ui/react'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
@@ -22,10 +22,25 @@ import { new4 } from '@/assets'
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = useState('right')
-
+    const [scrollTop, setScrollTop] = useState(0)
+    const onScroll = () =>{
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100
+        setScrollTop(scrolled)
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll)
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
     
   return (
     <>
+    <Box bg={'black'} h={'10px'} position={'sticky'} top={'0'} left={'0'} zIndex={1} w={'100%'}>
+        <Box  h={'10px'} w={`${scrollTop}%`} bg={'#FA9021'}>
+
+        </Box>
+    </Box>
     <Box w={'100%'} minH={'10vh'} bg={'#020100'} display={{lg: 'flex', md: 'none', base: 'none'}} pb={'0'}>
         <Box w={'80%'} className='center' >
         <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} pt={'0px'}>
